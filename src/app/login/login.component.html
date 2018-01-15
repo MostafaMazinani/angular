@@ -1,4 +1,4 @@
-<table cellspacing="20px">
+<table cellspacing="20px" [ngClass]="{redClass: chk_password<=1}">
   <tr>
     <td>Username:</td>
     <td><input type="text" [(ngModel)]="username" (input)="userNameCheck($event)"/></td>
