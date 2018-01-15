@@ -1,0 +1,7 @@
+<app-star
+  *ngFor="let rate of ratings; let indx = index"
+  [rating]="rate"
+  (starVote)="message($event)"
+>
+
+</app-star>

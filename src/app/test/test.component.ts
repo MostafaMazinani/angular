@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-test',
@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  number=0;
+  number = 0 ;
+  @Input()
+  message = '';
   constructor() {
     this.number = Math.random();
   }

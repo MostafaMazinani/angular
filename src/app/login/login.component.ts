@@ -9,12 +9,11 @@ import {passBoolean} from 'protractor/built/util';
 })
 export class LoginComponent implements OnInit {
 
-  username: string = '';
-  password: string = '';
-  chk_username: string = '';
+  username = '';
+  password = '';
+  chk_username = '';
   chk_password = 3;
   disabled = false;
-
   constructor() {
   }
 
@@ -22,7 +21,7 @@ export class LoginComponent implements OnInit {
   }
 
   userNameCheck(event: Event) {
-    if ((<HTMLInputElement> event.target).value.trim() != 'mostafa') {
+    if ((<HTMLInputElement> event.target).value.trim() !== 'mostafa') {
       this.chk_username = 'not find this username';
     } else {
       this.chk_username = ' you are my man';
@@ -31,15 +30,18 @@ export class LoginComponent implements OnInit {
 
 
   doLogin() {
-    if (this.username.trim() == 'mostafa' && this.password == '12354') {
+    if (this.username.trim() === 'mostafa' && this.password == '12354') {
       alert('welcome brother, god with us');
     } else {
-      this.chk_username = "somthing wrong";
-      this.chk_password = this.chk_password -1;
-      if(this.chk_password == 0) {
+      this.chk_username = 'something wrong';
+      this.chk_password = this.chk_password - 1;
+      if (this.chk_password === 0) {
         this.disabled = true;
       }
     }
   }
 
+  message(event: Event) {
+    console.log('Click on rating '.concat(event).concat(','));
+  }
 }

@@ -21,8 +21,13 @@
 
     <p *ngIf="!disabled; else loginError"></p>
     <ng-template #loginError>
-      You can't Try more than 3 times!
+      You can't Try more than 3 times!"
     </ng-template></td>
   </tr>
-
 </table>
+<app-about></app-about>
+
+<br>
+<br>
+<br>
+<app-star [rating]="3.6" (starVote)="message($event)"></app-star>
