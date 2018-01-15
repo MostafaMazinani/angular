@@ -1,0 +1,28 @@
+<table cellspacing="20px">
+  <tr>
+    <td>Username:</td>
+    <td><input type="text" [(ngModel)]="username" (input)="userNameCheck($event)"/></td>
+    <td>{{chk_username}}</td>
+  </tr>
+  <tr>
+    <td>Password</td>
+    <td><input type="password" [(ngModel)]="password"/></td>
+    <td>{{chk_password}}</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      <Button class="btn btn-primary" (click)="doLogin()" [disabled]="disabled">Login</Button>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+  <td>
+
+    <p *ngIf="!disabled; else loginError"></p>
+    <ng-template #loginError>
+      You can't Try more than 3 times!
+    </ng-template></td>
+  </tr>
+
+</table>
