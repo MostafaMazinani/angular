@@ -14,7 +14,7 @@ export class AboutComponent implements OnInit {
   ngOnInit() {
   }
 
-  message(event: Event) {
+  message(event) {
     alert('thanks for you vote'.concat(event));
   }
 

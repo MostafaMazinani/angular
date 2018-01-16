@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  userNameCheck(event: Event) {
+  userNameCheck(event) {
     if ((<HTMLInputElement> event.target).value.trim() !== 'mostafa') {
       this.chk_username = 'not find this username';
     } else {

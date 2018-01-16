@@ -1,0 +1,47 @@
+<div class="notification" *ngFor="let error of errors">
+  {{error}}
+</div>
+<table>
+  <tr>
+    <td>FirstName</td>
+    <td><input type="text" #inputSickFirstName> </td>
+    <td></td>
+  </tr>
+   <tr>
+    <td>LastName</td>
+     <td><input type="text" #inputSickLastName> </td>
+    <td></td>
+  </tr>
+   <tr>
+    <td>Sickness</td>
+     <td><input type="text" #inputSickSickness> </td>
+    <td></td>
+  </tr>
+   <tr>
+    <td>DateofVisit</td>
+    <td><input type="date" #inputSickDateofVisit/> </td>
+    <td></td>
+  </tr>
+   <tr>
+    <td>Emergency doctor</td>
+    <td><input type="text" #inputSickEmergencyDoccter/></td>
+    <td></td>
+  </tr>
+   <tr>
+    <td>Assessment </td>
+    <td><input type="text" #inputSickAssessment/></td>
+    <td></td>
+  </tr>
+   <tr>
+    <td>Description</td>
+    <!--<td><input type="text" #inputSickDescription /></td>-->
+    <td><textarea  cols="30" rows="5" #inputSickDescription></textarea></td>
+    <td></td>
+  </tr>
+   <tr>
+    <td></td>
+     <td><button type="submit" (click)="onRegisterClick()">Register</button> </td>
+     <td></td>
+  </tr>
+
+</table>

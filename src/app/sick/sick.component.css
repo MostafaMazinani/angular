@@ -1,0 +1,10 @@
+tr td {padding-top: 8px}
+input {
+  margin-left: 2px;
+}
+.notification {
+  border: 3px;
+  margin: 4px;
+  color: red;
+  font-size: 1.1em;
+}
