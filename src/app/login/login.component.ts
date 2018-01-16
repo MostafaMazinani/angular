@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  message(event: Event) {
+  message(event) {
     console.log('Click on rating '.concat(event).concat(','));
   }
 }
