@@ -1,0 +1,46 @@
+<div style="padding: 10px">
+  <p>Comments</p>
+  <textarea cols="30" rows="10" #textcomment></textarea>
+</div>
+<button class="btn btn-primary"
+        style="margin-left: 200px;"
+        (click)="setComment(textcomment)"
+>Comment</button>
+<!--------------comments----------------------->
+<div *ngIf="comments != null">
+  <div *ngFor="let com of comments; let indx = index" style="padding-top:10px ;">
+    <table style="background-color: aqua" border="2px">
+      <tr>
+        <td colspan="2"><p>{{com.text}}</p></td>
+        <td></td>
+        <td>
+          <a href="#" (click)="likeComment(indx)">
+            <span style="color: red;" class="glyphicon glyphicon-heart">{{com.like}}</span>
+          </a>
+          <a href="#" (click)="disLikeComment(indx)">
+            <span class="glyphicon glyphicon-heart-empty">{{com.dislike}}</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div [style.width.px]="com.rate / com.reviewNumber * 86 / 5">
+          <app-star></app-star>
+          </div>
+        </td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="background-color: red">
+          <input type="number" width="5px" min="0" max="5" size="5px"
+                 (click)="rate.focus()"
+                 #rate (keyup.enter)="setRate(indx, rate.value)"
+          />
+        </td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+</div>

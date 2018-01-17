@@ -1,0 +1,31 @@
+<div *ngIf="comments != null">
+  <div *ngFor="let com of comments" style="padding-top:10px ;">
+    <table style="background-color: aqua" border="2px">
+      <tr>
+        <td colspan="2"><p>{{com.text}}</p></td>
+        <td></td>
+        <td>
+          <a href="#"><span style="color: red;" class="glyphicon glyphicon-heart">{{com.like}}</span></a>
+          <a href="#"><span class="glyphicon glyphicon-heart-empty">{{com.dislike}}</span></a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <app-star></app-star>
+        </td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="background-color: red">
+          <input type="number" width="5px" min="0" max="5" size="5px"
+                 (click)="rate.focus()"
+                 #rate (keyup.enter)="setRate(rate.value)"
+          />
+        </td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+</div>

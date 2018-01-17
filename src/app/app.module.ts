@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { StarComponent } from './star/star.component';
 import { SickComponent } from './sick/sick.component';
 import { HeaderComponent } from './header/header.component';
+import { CommentComponent } from './comment/comment.component';
+import { UserCommentComponent } from './user-comment/user-comment.component';
 
 
 @NgModule({
@@ -21,13 +23,15 @@ import { HeaderComponent } from './header/header.component';
     HomeComponent,
     StarComponent,
     SickComponent,
-    HeaderComponent
+    HeaderComponent,
+    CommentComponent,
+    UserCommentComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
   providers: [],
-  bootstrap: [LoginComponent]
+  bootstrap: [HomeComponent]
 })
 export class AppModule { }
